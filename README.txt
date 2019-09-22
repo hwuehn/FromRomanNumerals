@@ -1,3 +1,29 @@
-FromRomanNumerals:
+Function Kata “From Roman Numerals”
 
-- römische Zahlen von 1-3000 in dezimale zahlen umwandeln
+Schreibe eine Funktion, die Römische Zahlen in Dezimalzahlen übersetzt.
+
+Beispiele:
+
+    „I“ -> 1
+    „II“ -> 2
+    „IV“ -> 4
+    „V“ -> 5
+    „IX“ -> 9
+    „XLII“ -> 42
+    „XCIX“ -> 99
+    „MMXIII“ -> 2013
+
+Die Römischen Zahlen bewegen sich im Bereich von „I“ bis „MMM“.
+
+Römische Ziffer:    I   V   X   L   C   D   M
+Wert:               1   5   10  50  100 500 1000
+
+Nimm an, dass die Römischen Zahlen korrekt sind.
+
+Erkenne syntaktische (z.B. „I X“) und semantische (z.B. „IC“) Fehler in Römischen Zahlen.
+Ressourcen
+
+[1] Römische Zahlen, http://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift
+Quelle
+
+http://codingdojo.org/cgi-bin/wiki.pl?KataRomanNumerals
