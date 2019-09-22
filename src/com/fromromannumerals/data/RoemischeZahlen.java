@@ -5,51 +5,42 @@ import java.util.List;
 
 public class RoemischeZahlen {
 
+    private List<String> roemischeZahlen = new ArrayList<>();
+    private List<String> zahlen = new ArrayList<>();
+    private List<Integer> sumZahlen = new ArrayList<>();
+
     public List<String> getRoemischeZahlen() {
         return roemischeZahlen;
     }
-
-    private List<String> roemischeZahlen = new ArrayList<>();
-
     public List<String> getZahlen() {
         return zahlen;
     }
-
-    private List<String> zahlen = new ArrayList<>();
-
-    public List<Integer> getSumZahlen() {
+    public List<Integer> getParsedZahlen() {
         return sumZahlen;
     }
 
-    private List<Integer> sumZahlen = new ArrayList<>();
-
-    public void createList(String roemischeZahl) {
-       for (int i = 0; i < roemischeZahl.length(); i++) {
+    public void createStringList(String roemischeZahl) {
+        System.out.println("Roemische Zahl: " + roemischeZahl);
+        for (int i = 0; i < roemischeZahl.length(); i++) {
            roemischeZahlen.add(roemischeZahl.substring(i,i+1));
-
        }
-        System.out.println(roemischeZahlen);
+        System.out.println("Liste (String): " + roemischeZahlen);
     }
 
-    public void transform(List<String> roemischeZahlen) {
+    public void transformToStringNumbers(List<String> roemischeZahlen) {
         roemischeZahlen.stream().map(e -> e
                 .replace("I","1").replace("V", "5")
                 .replace("X", "10").replace("L","50")
                 .replace("C","100").replace("M","1000")).forEach(e -> zahlen.add(e));
     }
 
-    public void parseStringToInt(List<String> zahlen) {
+    public void parseStringListToIntList(List<String> zahlen) {
         zahlen.stream().mapToInt(e -> Integer.parseInt(e)).forEach(e -> sumZahlen.add(e));
-        System.out.println(getSumZahlen());
+        System.out.println("Liste (Integer): " + getParsedZahlen());
     }
 
     public void sumElements(List<Integer> zahlen) {
-        System.out.println(zahlen.stream().reduce( 0, (e1,e2) -> e1 + e2));
+        System.out.println("Summe (Dezimalzahl): " + zahlen.stream().reduce( 0, (e1,e2) -> e1 + e2));
     }
-
-
-
-
-
-    }
+}
 

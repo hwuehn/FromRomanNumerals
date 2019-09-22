@@ -6,12 +6,9 @@ public class main {
 
     public static void main(String[] args) {
         RoemischeZahlen test = new RoemischeZahlen();
-        test.createList("MMXIII");
-        test.transform(test.getRoemischeZahlen());
-        test.parseStringToInt(test.getZahlen());
-        test.sumElements(test.getSumZahlen());
-
-
-
+        test.createStringList("MMXIII");
+        test.transformToStringNumbers(test.getRoemischeZahlen());
+        test.parseStringListToIntList(test.getZahlen());
+        test.sumElements(test.getParsedZahlen());
     }
 }
